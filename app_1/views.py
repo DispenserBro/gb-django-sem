@@ -30,5 +30,8 @@ def random_view(request):
     rand_number = randint(0, 100)
     logger.info(f'Dice side: {dice_side}')
     logger.info(f'Random number from 0 to 100: {rand_number}')
-    return HttpResponse(f'<p>Coin side: {choice(coin_sides)}</p><br><p>Dice side: {dice_side}</p>\
-<br><p>Random number from 0 to 100: {rand_number}</p>')
+
+    return HttpResponse(
+        f'<p>Coin side: {choice(coin_sides)}</p><br>\
+<p>Dice side: {dice_side}</p><br><p>Random number from 0 to 100: {rand_number}</p>'
+    )
